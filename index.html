@@ -2,32 +2,56 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Chat IA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AM DEV Solutions</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="app">
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <h2>Chat IA</h2>
-        <button class="new-chat">+ Nuevo chat</button>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="logo">
+        <img src="img/Logo.png" alt="AM DEV Solutions" />
       </div>
-
-      <!-- Main -->
-      <div class="main">
-        <div id="chat-box" class="chat-box"></div>
-
-        <div class="chat-input">
-          <input
-            type="text"
-            id="user-input"
-            placeholder="Escribe un mensaje..."
-          />
-          <button onclick="sendMessage()">Enviar</button>
-        </div>
+      <p class="historial-titulo">HISTORIAL</p>
+      <ul class="historial-lista" id="historialLista">
+        <!-- Los chats anteriores aparecen aquí -->
+      </ul>
+      <div class="usuario-info">
+        <div class="usuario-avatar">👤</div>
+        <span>Usuario</span>
+        <button class="btn-opciones">⋮</button>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- ÁREA PRINCIPAL -->
+    <div class="main">
+      <!-- HEADER -->
+      <div class="header">
+        <button class="btn-icon">⚙️</button>
+        <button class="btn-nuevo-chat" id="btnNuevoChat">Nuevo chat</button>
+        <button class="btn-cerrar-sesion">Cerrar sesión</button>
+      </div>
+
+      
+      <!-- MENSAJES -->
+      <div class="chat-area" id="chatArea">
+        <!-- Logo centrado cuando no hay mensajes -->
+        <div class="bienvenida" id="bienvenida">
+          <img src="img/Logo.png" alt="AM DEV Solutions" class="logo-centro" />
+        </div>
+      </div>
+
+      <div class="input-area">
+        <input
+          type="text"
+          id="inputMensaje"
+          placeholder="Pregunta a la IA"
+          autocomplete="off"
+        />
+        <button id="btnEnviar">➤</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
